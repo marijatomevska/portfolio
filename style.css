@@ -55,34 +55,25 @@ html {
 @media (max-width: 768px) {
     .navbar {
         display: none; /* Hide the navbar by default on small screens */
-        flex-direction: column;
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
         width: 100%; /* Full width */
     }
 
     .navbar.active {
         display: flex; /* Display the navbar when menu icon is clicked */
     }
-}
 
-@media (max-width: 768px) {
-    .header .navbar {
-        flex-direction: column; /* Stack nav items vertically on smaller screens */
-    }
-
-   .footer {
+    .footer {
         padding: 20px; /* Smaller padding on smaller screens */
     }
-}
 
-@media (max-width: 768px) {
     .home-content {
         padding: 10px; /* Adjust padding */
-        text-align: center; /* Center the text */
+        text-align: right; /* Center the text */
     }
 
     .home-img img {
         max-width: 100%; /* Ensure images are not larger than the container */
-        height: auto; /* Maintain aspect ratio */
     }
 
     .services-container {
