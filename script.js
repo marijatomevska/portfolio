@@ -128,3 +128,54 @@ initStars();
 animate();
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceBoxes = document.querySelectorAll('.service-box');
+    serviceBoxes.forEach(box => {
+        box.addEventListener('mouseenter', () => {
+            stars.forEach(star => {
+                // Calculate direction towards the center of the box
+                const boxRect = box.getBoundingClientRect();
+                const boxCenterX = boxRect.left + boxRect.width / 2;
+                const boxCenterY = boxRect.top + boxRect.height / 2;
+                const dx = boxCenterX - star.x;
+                const dy = boxCenterY - star.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                // Update velocity to move star towards the box center
+                star.velocity.x = dx / distance * 0.5; // Adjust speed factor as needed
+                star.velocity.y = dy / distance * 0.5;
+            });
+        });
+
+        box.addEventListener('mouseleave', () => {
+            // Restore original star velocities
+            initStars();
+        });
+    });
+
+    // Continue with star animation and initialization as previously set up
+    initStars();
+    animate();
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceBoxes = document.querySelectorAll('.service-box');
+
+    serviceBoxes.forEach(box => {
+        const infoDiv = box.querySelector('.service-info');
+        const image = box.querySelector('img');
+
+        box.addEventListener('mouseenter', () => {
+            infoDiv.style.opacity = '1'; // Show the text
+            image.style.transform = 'scale(1.1)'; // Scale the image
+        });
+
+        box.addEventListener('mouseleave', () => {
+            infoDiv.style.opacity = '0'; // Hide the text
+            image.style.transform = 'scale(1)'; // Reset the image scale
+        });
+    });
+});
+
+
