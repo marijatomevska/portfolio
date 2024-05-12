@@ -183,4 +183,10 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     nav.classList.toggle('active'); // Toggle visibility of navbar
 });
 
+window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight * 0.75; // Adjust height as a proportion of width
+    initStars();
+});
+
 
