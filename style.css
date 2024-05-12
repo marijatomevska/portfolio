@@ -69,14 +69,6 @@ html {
         flex-direction: column; /* Stack nav items vertically on smaller screens */
     }
 
-    .services-container {
-        grid-template-columns: 1fr; /* Stack project boxes instead of side by side */
-    }
-
-    .service-box img {
-        width: 100%; /* Full width images on smaller screens */
-    }
-
    .footer {
         padding: 20px; /* Smaller padding on smaller screens */
     }
