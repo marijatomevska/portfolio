@@ -51,52 +51,6 @@ html {
     }
 }
 
-/*@media (max-width: 768px) {
-    .navbar {
-        display: none; 
-        flex-direction: column; 
-        width: 100%; 
-        position: absolute; 
-        background-color: rgba(0, 0, 0, 0.9); 
-        top: 0;
-        left: 0;
-        z-index: 1000; 
-    }
-
-    .navbar.active {
-        display: flex; 
-    }
-
-    .footer {
-        padding: 20px; 
-    }
-
-    .home-content {
-        margin-top: 50px; 
-        padding: 10px; 
-        text-align: center; 
-        overflow: hidden; 
-    }
-
-    .home-img img {
-        width: 100%; 
-        height: auto; 
-    }
-
-    .services-container {
-        display: flex;
-        flex-direction: column; 
-    }
-
-    .service-box {
-        margin-bottom: 20px; 
-    }
-
-    .service-info {
-        padding: 10px; 
-    }
-}*/
-
 
 body {
     margin: 0;
@@ -282,53 +236,6 @@ span {
     position: relative;
 }
 
-/*.text-animation span::before {
-    content: "Web Developer";
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-
-.text-animation span::after {
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-    to {
-        border-left: 2px solid var(--main-color);
-    }
-}
-
-@keyframes words {
-    0%, 20% {
-        content: "Frontend Designer";
-    }
-    21%, 40% {
-        content: "Web Designer";
-    }
-    41%, 60% {
-        content: "UI / UX Designer";
-    }
-    61%, 80% {
-        content: "Web Developer";
-    }
-}
-
-@keyframes typing {
-    0%, 15%, 30%, 50%, 70%, 90% {
-        width: 0;
-    }
-    20%, 40%, 60%, 80%, 100% {
-        width: calc(100% + 8px);
-    }
-}*/
-
 
 .services {
     /*background: var(--bg-color);
@@ -346,32 +253,6 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-
-/*.service-box {
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-}
-
-.service-box:hover {
-    background: white;
-    color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
-}
-
-.service-box .service-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem;
-}*/
 
 .service-box {
     position: relative;
@@ -515,65 +396,48 @@ span {
     text-align: center;
 }
 
-/*@media (max-width: 768px) {
-    /* Adjust the header navigation and layout 
-    .header,
+@media (max-width: 768px) {
     .navbar {
-        width: 100%; /* Full width */
-        flex-direction: column; /* Stack elements vertically
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        position: absolute; 
+        background-color: rgba(0, 0, 0, 0.9); 
+        top: 0;
+        left: 0;
+        z-index: 1000; 
     }
 
-    .navbar {
-        display: flex; /* Always show the navbar on mobile 
-        position: static; /* Reset if previously set to absolute
-        padding: 0; /* Adjust padding if necessary 
+    .navbar.active {
+        display: flex; 
     }
 
-    /* Stack nav items vertically within the navbar 
-    .navbar a {
-        display: block; /* Block display to stack the links 
-        text-align: center; /* Center the text 
-        padding: 10px; /* Add padding for better touch targets 
-    }
-
-    /* Layout adjustments for the home content 
-    .home-content,
-    .home-img,
-    .services-container,
-    .service-box,
-    .contact,
     .footer {
-        align-items: center; /* Center-align the items 
+        padding: 20px; 
     }
 
-    /* Ensure images in the home and service sections are responsive 
-    .home-img img,
-    .service-box img {
-        width: 90%; /* Slightly less than full width for padding 
-        height: auto; /* Maintain aspect ratio 
-        margin-bottom: 20px; /* Space below images 
+    .home-content {
+        margin-top: 50px; 
+        padding: 10px; 
+        text-align: center; 
+        overflow: hidden; 
     }
 
-    /* Adjust the service info to be full width 
+    .home-img img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .service-box {
+        margin-bottom: 20px; 
+    }
+
     .service-info {
-        width: 100%; /* Full width 
-        padding: 10px; /* Adjust padding 
-        flex-direction: column; /* Stack children vertically 
+        padding: 10px; 
     }
-
-    /* Contact form and footer adjustments 
-    .input-group,
-    .input-box,
-    .input-group-2,
-    .social,
-    .list {
-        flex-direction: column; /* Stack form fields and footer links
-        align-items: center; /* Center-align elements 
-    }
-
-    /* Adjustments for input fields to be more mobile-friendly 
-    .input-box input,
-    .input-group-2 textarea {
-        width: 90%; /* Slightly less than full width for margins 
-    }
-}*/
+}
