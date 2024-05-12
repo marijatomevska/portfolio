@@ -178,4 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.getElementById('menu-icon').addEventListener('click', function() {
+    var nav = document.querySelector('.navbar');
+    nav.classList.toggle('active'); // Toggle visibility of navbar
+});
+
 
