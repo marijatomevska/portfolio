@@ -543,7 +543,6 @@ span {
     .service-box,
     .contact,
     .footer {
-        display: flex; /* Use flexbox for layout */
         align-items: center; /* Center-align the items */
     }
 
