@@ -51,12 +51,16 @@ html {
     }
 }
 
-/* Handling the navigation menu for small screens */
 @media (max-width: 768px) {
     .navbar {
         display: none; /* Hide the navbar by default on small screens */
-        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        flex-direction: column; /* Stack nav items vertically */
         width: 100%; /* Full width */
+        position: absolute; /* Ensure nav is on top of other content */
+        background-color: rgba(0, 0, 0, 0.9); /* Slight transparency */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Make sure it's above other content */
     }
 
     .navbar.active {
@@ -68,12 +72,15 @@ html {
     }
 
     .home-content {
+        margin-top: 50px; /* Add space above home content */
         padding: 10px; /* Adjust padding */
-        text-align: right; /* Center the text */
+        text-align: center; /* Center the text */
+        overflow: hidden; /* Prevent overflow */
     }
 
     .home-img img {
-        max-width: 100%; /* Ensure images are not larger than the container */
+        width: 100%; /* Ensure images are not larger than the container */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .services-container {
