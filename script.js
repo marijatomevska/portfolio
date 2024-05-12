@@ -39,3 +39,92 @@ function erase() {
 
 document.addEventListener('DOMContentLoaded', typeWriter);
 
+const canvas = document.getElementById('spaceCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = []; // Array to hold stars
+const numberOfStars = 150; // Number of stars
+
+class Star {
+    constructor(x, y, size, velocity) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.velocity = velocity;
+    }
+
+    draw() {
+        ctx.fillStyle = '#bbbbff'; // Light bluish color for stars
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+
+    update(mouse) {
+        this.x -= this.velocity.x;
+        this.y -= this.velocity.y;
+
+        // Wrap stars around the canvas
+        if (this.x < 0) this.x = canvas.width;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y > canvas.height) this.y = 0;
+
+        this.draw();
+
+        // Draw lines to nearby stars and mouse cursor
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 150) {
+            ctx.strokeStyle = '#4444dd'; // Dark blue color for lines
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+        }
+    }
+}
+
+let mouse = {
+    x: undefined,
+    y: undefined
+};
+
+function initStars() {
+    stars = [];
+    for (let i = 0; i < numberOfStars; i++) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let size = Math.random() * 2;
+        let velocity = { x: 0, y: 0.3 + Math.random() * 0.5 };
+        stars.push(new Star(x, y, size, velocity));
+    }
+}
+
+function animate() {
+    ctx.fillStyle = '#000022'; // Fill canvas with dark blue to create trail effect
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => star.update(mouse));
+    requestAnimationFrame(animate);
+}
+
+window.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+});
+
+window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initStars();
+});
+
+initStars();
+animate();
+
+
