@@ -77,8 +77,33 @@ html {
         width: 100%; /* Full width images on smaller screens */
     }
 
-    .home-content, .contact, .footer {
+   .footer {
         padding: 20px; /* Smaller padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center the text */
+    }
+
+    .home-img img {
+        max-width: 100%; /* Ensure images are not larger than the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column; /* Stack the boxes */
+    }
+
+    .service-box {
+        margin-bottom: 20px; /* Add space between boxes */
+    }
+
+    .service-info {
+        padding: 10px; /* Smaller padding */
     }
 }
 

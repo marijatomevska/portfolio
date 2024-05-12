@@ -184,8 +184,9 @@ document.getElementById('menu-icon').addEventListener('click', function() {
 });
 
 window.addEventListener('resize', function() {
+    // Adjust the canvas to be more responsive
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight * 0.75; // Adjust height as a proportion of width
+    canvas.height = Math.max(window.innerHeight * 0.75, 300); // Set a minimum height for better visibility
     initStars();
 });
 
