@@ -545,7 +545,6 @@ span {
     .footer {
         display: flex; /* Use flexbox for layout */
         align-items: center; /* Center-align the items */
-        width: 100%; /* Full width for all sections */
     }
 
     /* Ensure images in the home and service sections are responsive */
@@ -560,6 +559,7 @@ span {
     .service-info {
         width: 100%; /* Full width */
         padding: 10px; /* Adjust padding */
+        flex-direction: column; /* Stack children vertically */
     }
 
     /* Contact form and footer adjustments */
