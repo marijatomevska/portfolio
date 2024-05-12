@@ -544,7 +544,6 @@ span {
     .contact,
     .footer {
         display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack children vertically */
         align-items: center; /* Center-align the items */
         width: 100%; /* Full width for all sections */
     }
