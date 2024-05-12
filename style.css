@@ -515,65 +515,65 @@ span {
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    /* Adjust the header navigation and layout */
+/*@media (max-width: 768px) {
+    /* Adjust the header navigation and layout 
     .header,
     .navbar {
         width: 100%; /* Full width */
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; /* Stack elements vertically
     }
 
     .navbar {
-        display: flex; /* Always show the navbar on mobile */
-        position: static; /* Reset if previously set to absolute */
-        padding: 0; /* Adjust padding if necessary */
+        display: flex; /* Always show the navbar on mobile 
+        position: static; /* Reset if previously set to absolute
+        padding: 0; /* Adjust padding if necessary 
     }
 
-    /* Stack nav items vertically within the navbar */
+    /* Stack nav items vertically within the navbar 
     .navbar a {
-        display: block; /* Block display to stack the links */
-        text-align: center; /* Center the text */
-        padding: 10px; /* Add padding for better touch targets */
+        display: block; /* Block display to stack the links 
+        text-align: center; /* Center the text 
+        padding: 10px; /* Add padding for better touch targets 
     }
 
-    /* Layout adjustments for the home content */
+    /* Layout adjustments for the home content 
     .home-content,
     .home-img,
     .services-container,
     .service-box,
     .contact,
     .footer {
-        align-items: center; /* Center-align the items */
+        align-items: center; /* Center-align the items 
     }
 
-    /* Ensure images in the home and service sections are responsive */
+    /* Ensure images in the home and service sections are responsive 
     .home-img img,
     .service-box img {
-        width: 90%; /* Slightly less than full width for padding */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 20px; /* Space below images */
+        width: 90%; /* Slightly less than full width for padding 
+        height: auto; /* Maintain aspect ratio 
+        margin-bottom: 20px; /* Space below images 
     }
 
-    /* Adjust the service info to be full width */
+    /* Adjust the service info to be full width 
     .service-info {
-        width: 100%; /* Full width */
-        padding: 10px; /* Adjust padding */
-        flex-direction: column; /* Stack children vertically */
+        width: 100%; /* Full width 
+        padding: 10px; /* Adjust padding 
+        flex-direction: column; /* Stack children vertically 
     }
 
-    /* Contact form and footer adjustments */
+    /* Contact form and footer adjustments 
     .input-group,
     .input-box,
     .input-group-2,
     .social,
     .list {
-        flex-direction: column; /* Stack form fields and footer links */
-        align-items: center; /* Center-align elements */
+        flex-direction: column; /* Stack form fields and footer links
+        align-items: center; /* Center-align elements 
     }
 
-    /* Adjustments for input fields to be more mobile-friendly */
+    /* Adjustments for input fields to be more mobile-friendly 
     .input-box input,
     .input-group-2 textarea {
-        width: 90%; /* Slightly less than full width for margins */
+        width: 90%; /* Slightly less than full width for margins 
     }
-}
+}*/
