@@ -441,3 +441,25 @@ span {
         padding: 10px; 
     }
 }
+
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 20px; /* Adds padding around the content for smaller screens */
+        text-align: center; /* Centers the text */
+    }
+
+    .home-content h1, .home-content h3 {
+        font-size: 1.5rem; /* Reduces the font size for headers on smaller screens */
+    }
+
+    .home-content p {
+        font-size: 0.9rem; /* Reduces the font size for paragraph text */
+    }
+
+    .home-img img {
+        max-width: 100%; /* Ensures image does not exceed the width of the container */
+        height: auto; /* Keeps the aspect ratio of the image */
+    }
+}
+
